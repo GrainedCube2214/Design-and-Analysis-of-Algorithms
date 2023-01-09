@@ -20,6 +20,7 @@ int main() {
     cout<<"Enter "<<n<<" elements:\n";
     int arr[n];
     for (int i=0; i<n; i++) {
+        cout<<i+1<<": ";
         cin>>arr[i];
     }
     int max = min(arr);
@@ -29,5 +30,5 @@ int main() {
         if (max<maxhere) max=maxhere;
         if (maxhere<0) maxhere=0;
     }
-    cout << max;
+    cout <<"Max Sum: "<<max;
 }
