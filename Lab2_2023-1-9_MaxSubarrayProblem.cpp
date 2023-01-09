@@ -13,8 +13,15 @@ int min(int a[]) {
 }
 
 int main() {
-    int arr[] = { -2, -3, 4, -1, -2, 1, 5, -3, 5,16,17,18,19 };
-    int n=sizeof(arr)/sizeof(int); 
+    /*int arr[] = { -2, -3, 4, -1, -2, 1, 5, -3, 5};
+    int n=sizeof(arr)/sizeof(int); */
+    cout<<"Enter no of elements: ";
+    int n; cin>>n;
+    cout<<"Enter "<<n<<" elements:\n";
+    int arr[n];
+    for (int i=0; i<n; i++) {
+        cin>>arr[i];
+    }
     int max = min(arr);
     int maxhere = 0;
     for (int i=0; i<n; i++) {
