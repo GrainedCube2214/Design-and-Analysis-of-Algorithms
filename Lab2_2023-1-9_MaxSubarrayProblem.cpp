@@ -101,7 +101,7 @@ int min(int a[]) {
 
 int main() {
     //int arr[] = { -2, -3, 4, -1, -2, 1, 5, -3, 5};
-    int n=sizeof(arr)/sizeof(int); */
+    int n=sizeof(arr)/sizeof(int); 
     //cout<<"Enter no of elements: ";
     int n; cin>>n;
     //cout<<"Enter "<<n<<" elements:\n";
