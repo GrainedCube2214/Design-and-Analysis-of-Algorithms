@@ -84,3 +84,58 @@ int main()
 }
 
 */
+
+/*
+//With indices: as submitted in vpropel
+#include <iostream>
+using namespace std;
+
+int min(int a[]) {
+    int n = sizeof(a); 
+    int min = a[0]; 
+    for (int i=0; i<n; i++) {
+        if (min>a[i]) min=a[i]; 
+    }
+    return min;
+}
+
+int main() {
+    //int arr[] = { -2, -3, 4, -1, -2, 1, 5, -3, 5};
+    int n=sizeof(arr)/sizeof(int); */
+    //cout<<"Enter no of elements: ";
+    int n; cin>>n;
+    //cout<<"Enter "<<n<<" elements:\n";
+    int arr[n];
+    for (int i=0; i<n; i++) {
+        //cout<<i+1<<": ";
+        cin>>arr[i];
+    }
+ 
+    int max_so_far = min(arr);
+    int max_ending_here = 0;
+    int start = 0, end = 0;
+    int beg = 0;
+ 
+    for (int i = 0; i < n; i++)
+    {
+        max_ending_here = max_ending_here + arr[i];
+ 
+        if (max_ending_here < arr[i])
+        {
+            max_ending_here = arr[i];
+            beg = i;
+        }
+ 
+        if (max_so_far < max_ending_here)
+        {
+            max_so_far = max_ending_here;
+            start = beg+1;
+            end = i+1;
+        }
+    }
+    cout<<start<<" "<<end<<"\n"<<max_so_far;
+    /*for (int i = start; i <= end; i++) {
+        cout << arr[i] << " ";
+    }*/
+}
+*/
